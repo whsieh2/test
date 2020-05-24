@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [{ "src": "index.js", "use": "@now/node-server" },
+		{ "src": "/static/**", "use": "@now/static"}],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/static/index.html"
+    },
+    {
+      "src": "/initialTransfer",
+      "methods": ["POST"],
+      "dest": "/index.js"
+    },
+    {
+      "src": "/transfer",
+      "methods": ["POST"],
+      "dest": "/index.js"
+    },
+    {
+      "src": "/ethBalance",
+      "methods": ["POST"],
+      "dest": "/index.js"
+    },
+    {
+      "src": "/btcBalance",
+      "methods": ["POST"],
+      "dest": "/index.js"
+    }
+  ]
+}
